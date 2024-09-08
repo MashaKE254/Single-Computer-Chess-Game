@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="ChessIcon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Chess Game</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("loaded");
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="https://github.com/MashaKE254" target="_blank" class="github-button">
+            <i class="fab fa-github"></i> View on GitHub
+        </a>
+    </nav>
+    <div class="container">
+        <h1>Chess Game</h1>
+        <div id="turn-display">Current Turn: <span id="current-player">Player 1</span></div>
+        <div id="username-input" class="hidden">
+            <input type="text" id="player-name" placeholder="Enter your username">
+            <button id="set-username">Set Username</button>
+        </div>
+        <div class="game-area">
+            <div class="side-panel">
+                <div id="black-timer" class="timer">Black: 15:00</div>
+                <div id="black-captured" class="captured-pieces"></div>
+                <button id="black-start" class="start-button">Black Start</button>
+            </div>
+            <div id="chessboard"></div>
+            <div class="side-panel">
+                <div id="white-timer" class="timer">White: 15:00</div>
+                <div id="white-captured" class="captured-pieces"></div>
+                <button id="white-start" class="start-button">White Start</button>
+            </div>
+        </div>
+        <div class="button-container">
+            <button id="bot-toggle">Play with Bot</button>
+            <button id="reset-button" disabled>Reset Game</button>
+        </div>
+        <div id="game-over-screen" class="game-over-screen hidden">
+            <h2>Game Over</h2>
+            <p id="game-over-message"></p>
+            <button id="new-game-button">New Game</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
